@@ -15,7 +15,6 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-MVXWTHS7PM');
   </script>
 
@@ -32,7 +31,6 @@
       --white: #FFFFFF;
       --shadow-sm: 0 1px 3px rgba(15, 43, 72, 0.08);
       --shadow-md: 0 4px 12px rgba(15, 43, 72, 0.1);
-      --shadow-lg: 0 10px 25px rgba(15, 43, 72, 0.12);
     }
 
     * {
@@ -42,14 +40,12 @@
     }
 
     body {
-      font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       color: var(--text-dark);
       background-color: var(--warm-studio-paper);
       line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
     }
 
-    /* Navigation Header */
     header {
       background-color: var(--executive-navy);
       color: var(--white);
@@ -91,16 +87,10 @@
       color: var(--brushed-gold);
     }
 
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-    }
-
     .logo-title {
       font-size: 1.15rem;
       font-weight: 800;
-      letter-spacing: 0.5px;
-      line-height: 1.1;
+      display: block;
     }
 
     .logo-subtitle {
@@ -109,6 +99,7 @@
       letter-spacing: 1.5px;
       text-transform: uppercase;
       font-weight: 600;
+      display: block;
     }
 
     nav ul {
@@ -123,11 +114,6 @@
       text-decoration: none;
       font-size: 0.95rem;
       font-weight: 500;
-      transition: color 0.2s;
-    }
-
-    nav a:hover {
-      color: var(--brushed-gold);
     }
 
     .btn-primary {
@@ -137,17 +123,9 @@
       border-radius: 4px;
       font-weight: 700;
       text-decoration: none;
-      transition: background-color 0.2s;
-      border: none;
-      cursor: pointer;
       display: inline-block;
     }
 
-    .btn-primary:hover {
-      background-color: var(--brushed-gold-hover);
-    }
-
-    /* Hero Section */
     .hero {
       background: linear-gradient(135deg, var(--executive-navy) 0%, var(--navy-light) 100%);
       color: var(--white);
@@ -155,29 +133,9 @@
       text-align: center;
     }
 
-    .hero-content {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-
-    .badge-gold {
-      background-color: rgba(197, 160, 89, 0.15);
-      color: var(--brushed-gold);
-      border: 1px solid var(--brushed-gold);
-      padding: 0.35rem 1rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 700;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-      display: inline-block;
-      margin-bottom: 1.25rem;
-    }
-
     .hero h1 {
       font-size: 2.5rem;
       font-weight: 800;
-      line-height: 1.2;
       margin-bottom: 1rem;
     }
 
@@ -185,15 +143,17 @@
       font-size: 1.1rem;
       color: rgba(255, 255, 255, 0.85);
       margin-bottom: 2rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    /* Products Grid */
     .products-container {
       max-width: 1200px;
       margin: 4rem auto;
       padding: 0 1.5rem;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 2rem;
     }
 
@@ -202,14 +162,8 @@
       border: 1px solid var(--border-color);
       border-radius: 8px;
       padding: 2rem;
-      box-shadow: var(--shadow-sm);
       text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .product-card:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-sm);
     }
 
     .product-icon {
@@ -221,7 +175,6 @@
     .product-card h3 {
       font-size: 1.25rem;
       color: var(--executive-navy);
-      font-weight: 700;
       margin-bottom: 0.5rem;
     }
 
@@ -231,9 +184,85 @@
       margin-bottom: 1.5rem;
     }
 
-    /* Footer */
     footer {
       background-color: var(--executive-navy);
       color: var(--white);
-      padding: 2.5rem 2rem 1.5rem;
+      padding: 2.5rem 2rem;
       border-top: 4px solid var(--brushed-gold);
+      text-align: center;
+      font-size: 0.85rem;
+    }
+
+    footer a {
+      color: var(--brushed-gold);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <div class="nav-container">
+      <a href="https://fusionbizprint.com" class="brand-logo">
+        <div class="logo-mark">FB</div>
+        <div>
+          <span class="logo-title">COMMERCIAL PRINT PORTAL</span>
+          <span class="logo-subtitle">FUSION BIZ & PRINT SOLUTIONS</span>
+        </div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="https://fusionbizprint.com">Main Hub</a></li>
+          <li><a href="https://realtorhub.fusionbizprint.com">Realtor Hub</a></li>
+          <li><a href="mailto:orders@fusionbizprint.com?subject=Custom%20Print%20Quote" class="btn-primary">Request Quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Precision Business Print Solutions</h1>
+    <p>High-volume commercial printing, soft-touch business cards, marketing collateral, large format banners, and custom packaging built for scaling enterprises.</p>
+    <a href="mailto:orders@fusionbizprint.com?subject=Commercial%20Print%20Quote" class="btn-primary" style="padding: 0.8rem 1.75rem;">Submit Print Specs for Quote</a>
+  </section>
+
+  <!-- Catalog Grid -->
+  <div class="products-container">
+    <div class="product-card">
+      <div class="product-icon"><i class="fa-solid fa-id-card"></i></div>
+      <h3>Stationery & Cards</h3>
+      <p>Velvet soft-touch, 16pt/18pt cardstock, spot UV, foiled business cards, letterheads, and presentation folders.</p>
+      <a href="mailto:orders@fusionbizprint.com?subject=Quote%20-%20Business%20Cards" class="btn-primary" style="font-size: 0.85rem;">Request Spec Quote</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-icon"><i class="fa-solid fa-file-lines"></i></div>
+      <h3>Flyers & Collateral</h3>
+      <p>High-gloss, matte, tri-fold brochures, sales sheets, door hangers, and rack cards in custom quantities.</p>
+      <a href="mailto:orders@fusionbizprint.com?subject=Quote%20-%20Flyers" class="btn-primary" style="font-size: 0.85rem;">Request Spec Quote</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-icon"><i class="fa-solid fa-flag"></i></div>
+      <h3>Large Format & Displays</h3>
+      <p>Retractable pull-up banners, vinyl outdoor banners, rigid Coroplast/Foamcore signs, and trade show displays.</p>
+      <a href="mailto:orders@fusionbizprint.com?subject=Quote%20-%20Large%20Format" class="btn-primary" style="font-size: 0.85rem;">Request Spec Quote</a>
+    </div>
+
+    <div class="product-card">
+      <div class="product-icon"><i class="fa-solid fa-box-open"></i></div>
+      <h3>Packaging & Labels</h3>
+      <p>Branded product boxes, roll labels, custom stickers, die-cut decals, and unboxing collateral.</p>
+      <a href="mailto:orders@fusionbizprint.com?subject=Quote%20-%20Packaging" class="btn-primary" style="font-size: 0.85rem;">Request Spec Quote</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 Fusion Business & Print Solutions. All Rights Reserved. | Back to <a href="https://fusionbizprint.com">FusionBizPrint.com</a></p>
+  </footer>
+
+</body>
+</html>
